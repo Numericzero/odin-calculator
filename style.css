@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#display {
+    width: 400px;
+    height: 30px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+#calc {
+    display: flex;
+    width: 400px;
+}
+
+#pad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-basis: 300px;
+}
+
+#ops {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100px;
+}
+
+.btn {
+    flex-basis: 100px;
+}

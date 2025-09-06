@@ -7,6 +7,47 @@
     <title>Document</title>
 </head>
 <body>
+    <p id="display"></p>
+    <div id="calc">
+        <div id="pad">
+            <button class="number btn">7</button>
+            <button class="number btn">8</button>
+            <button class="number btn">9</button>
+            <button class="number btn">4</button>
+            <button class="number btn">5</button>
+            <button class="number btn">6</button>
+            <button class="number btn">1</button>
+            <button class="number btn">2</button>
+            <button class="number btn">3</button>
+            <button class="clr btn">CLEAR</button>
+            <button class="number btn">0</button>
+            <button class="eval btn">=</button>
+        </div>
+        <div id="ops">
+            <button id="add" class="operator btn">+</button>
+            <button id="subtract" class="operator btn">-</button>
+            <button id="multiply" class="operator btn">*</button>
+            <button id="divide" class="operator btn">/</button>
+        </div>
+    </div>
     <script src="script.js"></script>
+    <script>
+        document.querySelector("#pad").addEventListener("click", (e) => {
+            if(e.target.classList.contains("number"))
+            {
+                let number = e.target.textContent;
+                setNum(number);
+            }
+            else if(e.target.classList.contains("clr"))
+                clearAll();
+            else
+                operate();
+        })
+
+        document.querySelector("#ops").addEventListener("click", (e) => {
+            let ops = e.target.id;
+            setOps(ops);
+        })
+    </script>
 </body>
 </html>
